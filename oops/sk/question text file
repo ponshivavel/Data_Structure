@@ -1,0 +1,213 @@
+Push numbers 1 to 5 and print the stack.
+
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(in.nextInt());
+        }
+        System.out.print(sk);
+    }
+    
+}
+
+Pop two elements and print the remaining stack.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(in.nextInt());
+        }
+        sk.pop();
+        sk.pop();
+        System.out.print(sk);
+    }
+    
+}
+
+Find the size of the stack.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(in.nextInt());
+        }
+        sk.pop();
+        sk.pop();
+        System.out.print(sk.size());
+    }
+    
+}
+
+Print the top element.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(in.nextInt());
+        }
+        sk.pop();
+        sk.pop();
+        System.out.print(sk.peek());
+    }
+    
+}
+
+Check whether the stack is empty.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(in.nextInt());
+        }
+        sk.pop();
+        sk.pop();
+        System.out.print(sk.isEmpty());
+    }
+    
+}
+
+Remove all elements using a loop.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(i);
+        }
+        int n = sk.size();
+        for(int i =0;i<n;i++){
+             sk.pop();
+                  
+        }
+    
+        System.out.print(sk);
+        System.out.print(sk.isEmpty());
+    }
+    
+Print all elements without removing them.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(i);
+        }
+        int n = sk.size();
+        for(int i =0;i<n;i++){
+             System.out.println(sk.get(i));
+                  
+        }
+System.out.print(sk);
+    }
+    
+}
+
+Count how many elements are in the stack.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<5;i++){
+            sk.push(i);
+        }
+        int n = sk.size();
+     
+System.out.print(n);
+    }
+    
+}
+
+Push numbers from 1 to 10 using a loop.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<11;i++){
+            sk.push(in.nextInt());
+        }
+        System.out.print(sk);
+    }
+    
+}
+Print only even numbers from the stack without modifying it.
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        Stack<Integer> sk = new Stack<>();
+        for(int i =0;i<20;i++){
+            sk.push(i);
+        }
+        int n = sk.size();
+        for(int i =0;i<n;i++){
+                if(sk.get(i)%2==0) System.out.print(sk.get(i)+" ");
+        }
+    
+    }
+    
+}
+✅ Basics & Operations               100%
+✅ Basic Coding                      100%
+✅ Balanced Parentheses              100%
+⏳ Reverse String
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        Scanner in = new Scanner(System.in);
+        String a = "ponshivavelsk";
+        Stack<Character> sk = new Stack<>();
+        for(int i =a.length()-1;i>=0;i--){
+            sk.push(a.charAt(i));
+        }
+        int n = sk.size();
+       
+             System.out.print(sk);
+        
+    
+    }
+    
+}
+
+⏳ Reverse Array
+import java.util.*;
+public  class stack {
+    public static void main(String []arg){
+        int arr[]={1,2,3,4,5,6,7,8,9,7,6,544,3,4,65,6,64,4,3,3};
+        Scanner in = new Scanner(System.in);
+    
+        Stack<Integer> sk = new Stack<>();
+        for(int i =arr.length-1;i>=0;i--){
+            sk.push(arr[i]);
+        }
+        int n = sk.size();
+       
+             System.out.print(sk);
+        
+    
+    }
+    
+}
+
+⏳ Implement Stack using Array
+⏳ Min Stack
+⏳ Next Greater Element
+⏳ Next Smaller Element
+⏳ Daily Temperatures
+⏳ Stock Span
+⏳ Largest Rectangle Histogram
+⏳ Sum of Subarray Minimums
