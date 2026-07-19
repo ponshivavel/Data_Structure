@@ -1,0 +1,19 @@
+Front             Rear
+  ↓                ↓
++----+----+----+----+
+| 10 | 20 | 30 | 40 |
++----+----+----+----+
+
+Delete from Front
+Insert at Rear
+
+
+
+Queue Operations
+_______________________________________________
+Operation	   Description	               Time
+enqueue()  	Insert element at rear	      O(1)
+dequeue()  	Remove element from front   	O(1)
+peek()	    Get front element	            O(1)
+isEmpty()	  Check queue empty	            O(1)
+size()     	Number of elements	           O(1)
