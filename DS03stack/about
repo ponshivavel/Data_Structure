@@ -14,6 +14,15 @@ Think of a stack of plates.
   |   10  |  ← Bottom
   |_______|
 
+__________________
+| Time Complexity |
+___________________
+Operation	Complexity
+Push	        O(1)
+Pop	        O(1)
+Peek	        O(1)
+Search	     O(n)
+
 
 
 --------------------
