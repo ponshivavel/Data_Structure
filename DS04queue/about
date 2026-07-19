@@ -1,263 +1,73 @@
-# 📚 Queue Data Structure (Java)
+Front             Rear
+  ↓                ↓
++----+----+----+----+
+| 10 | 20 | 30 | 40 |
++----+----+----+----+
 
-A **Queue** is a **Linear Data Structure** that follows the **FIFO (First In, First Out)** principle.
+Delete from Front
+Insert at Rear
 
-> The first element inserted into the queue is the first one to be removed.
 
----
 
-# 📌 Queue Representation
+Queue Operations
+_______________________________________________
+Operation	   Description	               Time
+_______________________________________________
+enqueue()  	Insert element at rear	      O(1)
+dequeue()  	Remove element from front   	O(1)
+peek()	    Get front element	            O(1)
+isEmpty()	  Check queue empty	            O(1)
+size()     	Number of elements	           O(1)
 
-```
-Front                     Rear
-  ↓                         ↓
-+-----+-----+-----+-----+
-| 10  | 20  | 30  | 40  |
-+-----+-----+-----+-----+
-```
 
-- ✅ Insert → **Rear**
-- ✅ Delete → **Front**
 
----
+Types of Queue
+1. Simple Queue
+_______________________________
+10 20 30 40
 
-# ⚙️ Queue Operations
+FIFO.
 
-| Operation | Description | Time Complexity |
-|-----------|-------------|-----------------|
-| `enqueue()` | Insert element at the rear | **O(1)** |
-| `dequeue()` | Remove element from the front | **O(1)** |
-| `peek()` | View the front element | **O(1)** |
-| `isEmpty()` | Check whether queue is empty | **O(1)** |
-| `size()` | Return number of elements | **O(1)** |
-
----
-
-# 📌 Queue in Java
-
-```java
-Queue<Integer> queue = new LinkedList<>();
-
-queue.offer(10);
-queue.offer(20);
-queue.offer(30);
-
-System.out.println(queue.peek());     // 10
-
-System.out.println(queue.poll());     // 10
-
-System.out.println(queue.peek());     // 20
-```
-
----
-
-# 📂 Types of Queue
-
-## 1️⃣ Simple Queue
-
-A Simple Queue follows the **FIFO** principle.
-
-```
-Front                 Rear
- ↓                      ↓
-10 → 20 → 30 → 40
-```
-
-✔ Insert at Rear
-
-✔ Delete from Front
-
----
-
-## 2️⃣ Circular Queue
-
-A Circular Queue connects the last position back to the first position.
-
-```
+2. Circular Queue
+_______________________________
 Rear reaches end
 ↓
 
-+----+----+----+----+
-|10  |20  |30  |40  |
-+----+----+----+----+
- ↑                  ↓
- └────── Front ─────┘
-```
+[10][20][30][40]
+ ↑            ↓
+ Front <------
 
-### Advantages
+Efficiently reuses empty spaces.
 
-- Efficient memory utilization
-- Reuses empty spaces
-- No shifting of elements
+3. Deque (Double Ended Queue)
+_________________________________
+Front ← 10 20 30 → Rear
 
-### Applications
+Insertion and deletion are possible at both ends.
 
-- CPU Scheduling
-- Circular Buffers
-- Streaming Data
+Java:
 
----
-
-## 3️⃣ Deque (Double Ended Queue)
-
-A **Deque** allows insertion and deletion from **both ends**.
-
-```
-Front ← 10 ⇄ 20 ⇄ 30 → Rear
-```
-
-### Java Example
-
-```java
 Deque<Integer> dq = new ArrayDeque<>();
 
 dq.offerFirst(10);
 dq.offerLast(20);
-dq.offerLast(30);
-
-System.out.println(dq);
 
 dq.pollFirst();
 dq.pollLast();
 
-System.out.println(dq);
-```
+4. Priority Queue
+____________________________________
 
-### Operations
+Elements are removed based on priority, not insertion order.
 
-| Operation | Description |
-|-----------|-------------|
-| `offerFirst()` | Insert at Front |
-| `offerLast()` | Insert at Rear |
-| `pollFirst()` | Remove from Front |
-| `pollLast()` | Remove from Rear |
-| `peekFirst()` | View Front |
-| `peekLast()` | View Rear |
-
----
-
-## 4️⃣ Priority Queue
-
-A **Priority Queue** removes elements based on **priority**, not insertion order.
-
-By default, Java implements a **Min Heap**.
-
-```
-Inserted Order
-
-40
-10
-30
-
-↓
-
-Priority Order
-
-10
-30
-40
-```
-
-### Java Example
-
-```java
 PriorityQueue<Integer> pq = new PriorityQueue<>();
 
 pq.offer(40);
 pq.offer(10);
 pq.offer(30);
 
-System.out.println(pq.poll()); // 10
-System.out.println(pq.poll()); // 30
-System.out.println(pq.poll()); // 40
-```
-
-### Output
-
-```
-10
-30
-40
-```
-
----
-
-# 🔺 Max Heap Priority Queue
-
-To create a **Max Heap**:
-
-```java
-PriorityQueue<Integer> pq =
-        new PriorityQueue<>(Collections.reverseOrder());
-
-pq.offer(40);
-pq.offer(10);
-pq.offer(30);
-
 System.out.println(pq.poll());
-```
 
-### Output
+Output:
 
-```
-40
-```
-
----
-
-# 📊 Time Complexity
-
-| Queue Type | Insert | Delete | Peek |
-|------------|--------|--------|------|
-| Simple Queue | O(1) | O(1) | O(1) |
-| Circular Queue | O(1) | O(1) | O(1) |
-| Deque | O(1) | O(1) | O(1) |
-| Priority Queue | O(log n) | O(log n) | O(1) |
-
----
-
-# 🌍 Real-Life Applications
-
-- 🖨 Printer Queue
-- 💻 CPU Scheduling
-- 🌐 Network Packet Processing
-- 🎫 Ticket Booking Systems
-- 📞 Call Center Management
-- 🚦 Traffic Management
-- 📨 Message Queues
-- 🔄 Breadth First Search (BFS)
-
----
-
-# 🎯 Key Points
-
-- Queue follows **FIFO (First In, First Out)**.
-- Elements are inserted at the **Rear**.
-- Elements are removed from the **Front**.
-- `Queue` is an interface in Java.
-- `LinkedList` and `ArrayDeque` are common implementations.
-- `PriorityQueue` removes elements according to priority (Min Heap by default).
-- `Deque` supports insertion and deletion at both ends.
-
----
-
-## ⭐ Example Flow
-
-```
-Enqueue(10)
-[10]
-
-Enqueue(20)
-[10, 20]
-
-Enqueue(30)
-[10, 20, 30]
-
-Dequeue()
-
-[20, 30]
-
-Peek()
-
-20
-```
+10   make this good to but in github reposiorut  
