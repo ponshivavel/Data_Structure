@@ -1,0 +1,43 @@
+STACK (LIFO - Last In First Out)
+
+Think of a stack of plates.
+
+   _______
+  |   50  |  ← Top
+  |_______|
+  |   40  |
+  |_______|
+  |   30  |
+  |_______|
+  |   20  |
+  |_______|
+  |   10  |  ← Bottom
+  |_______|
+
+
+
+--------------------
+Real Life Examples
+-------------------
+Browser Back button
+Undo in MS Word
+Ctrl + Z
+Function Call Stack
+Expression Evaluation
+Parentheses Matching
+
+
+
+operations
+----------------
+push()
+pop()
+peek()
+size()
+isEmpty()
+get(i)
+seach(x)
+
+
+
+
